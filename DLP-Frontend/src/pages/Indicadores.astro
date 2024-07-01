@@ -1,0 +1,45 @@
+---
+import { section } from "@interfaces/Sections";
+
+import Container from "@components/container.astro";
+import ShowProducts from "@components/products/showProducts.astro";
+import Layout from "@layouts/Layout.astro";
+
+const sections: section[] = [{
+    image: "/src/assets/sections/indicadores/peso.jpg",
+    title: "Solo Peso",
+    url  : "Indicadores/peso"
+},
+{
+    image: "/src/assets/sections/indicadores/acero.jpg",
+    title: "En Acero Inoxidable",
+    url  : "Indicadores/acero"
+},
+{
+    image: "/src/assets/sections/indicadores/impresoras.png",
+    title: "Con Impresora",
+    url  : "Indicadores/impresora"
+},
+{
+    image   : "/src/assets/sections/indicadores/control.jpg",
+    title   : "Para Control",
+    url     : "Indicadores/control"
+},
+{
+    image: "/src/assets/sections/indicadores/inalambricos.jpg",
+    title: "Inalámbricos",
+    url: "Indicadores/inalámbricos"
+},
+{
+    image: "/src/assets/sections/indicadores/remoto.jpg",
+    title: "Visor Remoto",
+    url  :"Indicadores/remoto"
+}]
+
+---
+
+<Layout title="Indicadores">
+    <Container>
+        <ShowProducts title="Indicadores" sections={sections}/>
+    </Container>
+</Layout>

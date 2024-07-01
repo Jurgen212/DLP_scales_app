@@ -1,0 +1,33 @@
+---
+import Layout from "@layouts/Layout.astro";
+import ContactForm from "@components/landing/contactForm.astro";
+import Container from "@components/container.astro";
+---
+
+<Layout title="Contacto">
+  <Container>
+      <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
+        <div>
+          <h2 class="font-medium text-2xl text-gray-800 mb-2">Contacto DLP Basculas</h2>
+          
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.6159671489963!2d-76.49181102497703!3d3.4432109512745406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a7a78bd3ae45%3A0x5b4fa5c6da2ee8c2!2sCra.%2023%20%2371-84%2C%20Lleras%20Restrepo%2C%20Cali%2C%20Valle%20del%20Cauca!5e0!3m2!1ses-419!2sco!4v1705012409385!5m2!1ses-419!2sco" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+          <div class="mt-5">
+            <div class="flex items-center mt-2 space-x-2 text-gray-400 hover:text-black">
+              <a href="https://maps.app.goo.gl/Qp3JrDStj3jifNVF6" >Carrera 23 #71-84 B/. Ulpiano lloreda</a>
+            </div><div class="flex items-center mt-2 space-x-2 text-gray-400 hover:text-black"><a
+                href="mailto:comercial@dlpbasculas.com"
+                >comercial@dlpbasculas.com</a
+              >
+            </div><div class="flex items-center mt-2 space-x-2 text-gray-400 hover:text-black"><a
+              href="https://api.whatsapp.com/send?phone=3132523008">+57 313 252 3008</a
+              >
+            </div>
+          </div>
+        </div>
+        <div>
+          <ContactForm />
+        </div>
+      </div>
+  </Container>
+</Layout>

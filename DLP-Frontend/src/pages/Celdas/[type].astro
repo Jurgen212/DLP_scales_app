@@ -1,0 +1,45 @@
+---
+import { getProductsByType } from '@services/products'
+
+import Layout from "@layouts/Layout.astro";
+import Product from "@components/products/product.astro";
+import Container from "@components/container.astro";
+
+export const prerender = false
+
+const { type } = Astro.params
+
+let result  
+
+if( type ){
+
+    result =   await getProductsByType(type) 
+}
+
+const principalDataWithType = result.results 
+
+
+const principalDataNoType = principalDataWithType.map( (res) =>{
+
+    const sectionFromDB = res.section.toLowerCase()
+    const sectionLocal = type.toLowerCase() 
+
+    if( sectionFromDB.includes( sectionLocal ) && res.type.includes( "Celdas" ) ) return res   
+}).filter( Boolean )
+
+---
+<Layout  title={result.name}>
+    <Container>
+        <div class="contain flex flex-row flex-wrap justify-center gap-10 px-10 align-middle">
+                {
+                    principalDataNoType.map( (result) => 
+                        (
+                            <Product product ={result}/>
+                            )
+                        )
+                }
+        </div>
+    </Container>
+</Layout>
+
+

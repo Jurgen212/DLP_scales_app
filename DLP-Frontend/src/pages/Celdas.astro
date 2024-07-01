@@ -1,0 +1,35 @@
+---
+import { section } from "@interfaces/Sections";
+
+import Container from "@components/container.astro";
+import ShowProducts from "@components/products/showProducts.astro";
+import Layout from "@layouts/Layout.astro";
+
+const sections: section[] = [{
+    image: "/src/assets/sections/celdas/shear.png",
+    title: "Shear Beam",
+    url  : "Celdas/shear"
+},
+{
+    image: "/src/assets/sections/celdas/mono.png",
+    title: "Mono Bloque",
+    url  : "Celdas/mono"
+},
+{
+    image: "/src/assets/sections/celdas/s.png",
+    title: "Tipo S",
+    url  : "Celdas/Tipo s"
+},
+{
+    image   : "/src/assets/sections/celdas/montaje.png",
+    title   : "Con Montaje",
+    url     : "Celdas/montaje"
+}]
+
+---
+
+<Layout title="Celdas de Carga">
+    <Container>
+        <ShowProducts title="Celdas de Carga" sections={sections}/>
+    </Container>
+</Layout>

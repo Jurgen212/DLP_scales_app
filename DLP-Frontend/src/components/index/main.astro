@@ -1,0 +1,64 @@
+---
+import SectionOne from "@components/index/sections/SectionOne.astro";
+import SectionTwo from "@components/index/sections/SectionTwo.astro";
+import SectionThree from "@components/index/sections/SectionThree.astro";
+import SectionFour from "@components/index/sections/SectionFour.astro";
+import { section } from "@interfaces/Sections";
+import ShowProducts from "@components/products/showProducts.astro";
+
+
+const sections: section[] = [{
+    image: "/src/assets/sections/balanzas/liquidadoras.webp",
+    title: "Liquidadoras",
+    url  : "Balanzas/liquidadoras"
+},
+{
+    image: "/src/assets/sections/balanzas/solo-peso.webp",
+    title: "Solo Peso",
+    url  : "Balanzas/peso"
+},
+{
+    image: "/src/assets/sections/balanzas/ambiente-humedo.webp",
+    title: "Ambiente Humedo",
+    url  : "Balanzas/humedo"
+},
+{
+    image   : "/src/assets/sections/balanzas/cuenta-piezas.webp",
+    title   : "Cuenta Piezas",
+    url     : "Balanzas/piezas"
+},
+{
+    image: "/src/assets/sections/balanzas/precision.webp",
+    title: "Alta Presición",
+    url: "Balanzas/presicion"
+},
+{
+    image: "/src/assets/sections/balanzas/analiticas.webp",
+    title: "Analitica",
+    url  :"Balanzas/analitica"
+},
+{
+    image: "/src/assets/sections/balanzas/humedad.webp",
+    title: "Determinación Humedad",
+    url  : "Balanzas/humedad"
+},
+{
+    image: "/src/assets/sections/balanzas/pos.webp",
+    title: "Para Dos",
+    url  :"Balanzas/dos"
+}]
+
+
+---
+
+<ShowProducts title="" sections={sections}/>
+
+<!-- Section 1 -->
+<SectionOne />
+<!-- Section 2 -->
+<SectionTwo />
+<!-- Section 3 -->
+<SectionThree />
+<!-- Section 4 -->
+<SectionFour />
+

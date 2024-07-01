@@ -1,0 +1,35 @@
+---
+import { section } from "@interfaces/Sections";
+
+import Container from "@components/container.astro";
+import ShowProducts from "@components/products/showProducts.astro";
+import Layout from "@layouts/Layout.astro";
+
+const sections: section[] = [{
+    image: "/src/assets/sections/basculas/colgantes.png",
+    title: "Tipo Gancho Colgante",
+    url  : "Basculas/gancho"
+},
+{
+    image: "/src/assets/sections/basculas/ganadera.png",
+    title: "Ganadera y Porcina",
+    url  : "Basculas/ganadera"
+},
+{
+    image: "/src/assets/sections/basculas/piso.png",
+    title: "Bascula de Piso",
+    url  : "Basculas/piso"
+},
+{
+    image   : "/src/assets/sections/basculas/plataforma.png",
+    title   : "Bascula Plataforma",
+    url     : "Basculas/plataforma"
+}]
+
+---
+
+<Layout title="Básculas">
+    <Container>
+        <ShowProducts title="Básculas" sections={sections}/>
+    </Container>
+</Layout>

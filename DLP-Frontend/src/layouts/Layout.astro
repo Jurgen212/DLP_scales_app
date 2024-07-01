@@ -1,0 +1,47 @@
+---
+import { SEO } from "astro-seo";
+import { ViewTransitions } from 'astro:transitions';
+
+import Footer from "@components/footer.astro";
+import Navbar from "@components/navbar/navbar.astro";
+import "@fontsource-variable/inter/index.css";
+
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+
+const makeTitle = title
+  ? title + " | " + "DLP BASCULAS CALI"
+  : "DLP BASCULAS CALI";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <ViewTransitions />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/src/assets/logo-dlp-basculas.webp" />
+    <meta name="generator" content={Astro.generator} />  
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.css' rel='stylesheet' />
+
+
+
+    <SEO
+    title={makeTitle}
+    description="Encuentra las mejores básculas y balanzas en Cali, Colombia. Ofrecemos una amplia gama de productos de alta calidad para satisfacer tus necesidades de pesaje. ¡Descubre soluciones precisas y confiables para la industria y el comercio en DLP Básculas Cali!"
+  />  
+  </head>
+  <body>
+    <Navbar />
+    <slot />
+    <Footer />
+    <style is:global>
+      img {
+        content-visibility: auto;
+      }
+    </style>
+  </body>
+</html>
